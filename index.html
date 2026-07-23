@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <title> Noah Fashion | Tienda de Ropa Casual y Tendencias </title>
+    <meta name="description" content="Descubre la mejor ropa urbana y de moda casual para hombre y mujer. Envíos a toda Bogotá y calidad garantizada.">
+    <meta name="keywords" content="ropa urbana, moda, camisetas, jeans, ropa casual, tienda de ropa">
+    <meta name="author" content="Noah Fashion">
+    <meta property="og:title" content="Noah Fashion - Tienda Online">
+    <meta property="og:description" content="Define tu estilo con las últimas tendencias en ropa urbana.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tu-sitio.netlify.app/img/banner-og.jpg">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a>
+                <img src="Images/NoahFa-Photoroom.png" alt="Noah Fashion Logo" class="logo-img">
+            </a>
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="colección.html">Colección</a></li>
+                <li><a href="ofertas.html" class="link-ofertas">Ofertas</a></li>
+                <li><a href="compañia.html">Compañia</a></li>
+                <li><a href="contáctanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <a href="#buscador-modal" class="icon-btn search-trigger" title="Buscar" aria-label="Abrir buscador">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="#carrito" class="cart-btn" aria-label="Abrir carrito">
+                <i class="fa-solid fa-cart-shopping"></i> (0)
+            </a>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-banner">
+        <div class="hero-content">
+            <h2>Nueva Colección 2026</h2>
+            <p>Viste al estilo de la Sele con las últimas tendencias de la temporada.</p>
+            <a href="#productos" class="btn-primary">Comprar Ahora</a>
+        </div>
+    </section>
+
+    <main id="productos" class="catalog-container">
+        <h2 class="section-title">Productos Destacados</h2>
+
+        <div class="productos-grid">
+            
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="Images/pañoleta1.jpg" alt="Pañoleta Tricolor">
+                </div>
+                <div class="product-info">
+                    <h3>Pañoleta "Colombia, Tierra que Inspira Orgullo"</h3>
+                    <p class="category">Nueva Coleccion 2026 / Pañoletas</p>
+                    <p class="price">$25.000</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="Images/pañoleta2.jpg" alt="Pañoleta Mariposas">
+                </div>
+                <div class="product-info">
+                    <h3>Pañoleta Sol, Mariposas y Corazones</h3>
+                    <p class="category">Nueva Coleccion 2026 / Pañoletas</p>
+                    <p class="price">$25.000</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="Images/pañoleta3.jpg" alt="Pañoleta Tricolor y Blanco">
+                </div>
+                <div class="product-info">
+                    <h3>Pañoleta "Colombia, Tierra de Colores y Orgullo"</h3>
+                    <p class="category">Nueva Coleccion 2026 / Pañoletas</p>
+                    <p class="price">$25.000</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="Images/pañoleta4.jpg" alt="Pañoleta Tricolor Corazones">
+                </div>
+                <div class="product-info">
+                    <h3>Pañoleta Tricolor Corazones</h3>
+                    <p class="category">Nueva Coleccion 2026 / Pañoletas</p>
+                    <p class="price">$25.000</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-box">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#envios">Envíos y Devoluciones</a></li>
+                    <li><a href="#guia-tallas">Guía de Tallas</a></li>
+                    <li><a href="contáctanos.html">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Síguenos</h4>
+                <p>Instagram | Facebook | TikTok</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NOAH FASHION S.A.S — TODOS LOS DERECHOS RESERVADOS.</p>
+            <P>Bogotá, Colombia</P>
+        </div>
+    </footer>
+
+    <div id="buscador-modal" class="search-modal">
+
+        <div class="search-modal-content">
+            <a href="#" class="close-search">&times;</a>
+            <h3>¿Qué estás buscando?</h3>
+            <form action="#" method="GET" class="modal-search-form">
+                <input type="text" placeholder="Escribe aquí (ej. Camiseta, Jean...)" required>
+                <button type="submit" class="btn-primary">Buscar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
