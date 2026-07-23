@@ -141,6 +141,28 @@
             <P>Bogotá, Colombia</P>
         </div>
     </footer>
+    <script src="main.js"></script>
+        <script src="main.js"></script>
 
+    <!-- MODAL DEL CARRITO DE COMPRAS -->
+    <div id="carrito-modal" class="search-modal">
+        <div class="search-modal-content cart-modal-content">
+            <a href="#" id="close-cart" class="close-search">&times;</a>
+            <h3><i class="fa-solid fa-cart-shopping"></i> Tu Carrito</h3>
+            <!-- Lista dinámica de productos -->
+             <div id="lista-carrito" class="cart-items-container">
+            <!-- Se llena automáticamente con JS -->
+            </div>
+            <div class="cart-total-box">
+                <span>Total:</span>
+                <strong id="total-carrito">$0</strong>
+            </div>
+            
+            <div class="cart-actions">
+                <button id="vaciar-carrito" class="btn-secondary">Vaciar</button>
+                <button id="finalizar-compra" class="btn-primary">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

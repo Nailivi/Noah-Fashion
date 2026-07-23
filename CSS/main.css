@@ -560,3 +560,94 @@ blockquote {
     border: none;
     cursor: pointer;
 }
+
+/* Estilos específicos para la ventana del carrito */
+.cart-modal-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+.cart-modal-content h3 {
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.cart-items-container {
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cart-empty {
+    text-align: center;
+    color: #777777;
+    padding: 20px 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.cart-item-info strong {
+    display: block;
+    font-size: 14px;
+    color: #111111;
+}
+
+.cart-item-info span {
+    font-size: 13px;
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.btn-remove:hover {
+    color: #c0392b;
+}
+
+.cart-total-box {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 15px 0;
+    border-top: 2px solid #111111;
+    margin-bottom: 15px;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cart-actions button {
+    flex: 1;
+}
+
+.btn-secondary {
+    background-color: #eeeeee;
+    color: #333333;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #dddddd;
+}
