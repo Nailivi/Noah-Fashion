@@ -1,0 +1,17 @@
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .product-card {
+        flex: 1 1 calc(25% - 20px); // 4 columnas en Pantalla Grande
+
+        @include responder-a(tablet) {
+            flex: 1 1 calc(50% - 20px); // 2 columnas en Tablet
+        }
+
+        @include responder-a(mobile) {
+            flex: 1 1 100%; // 1 columna en Celular
+        }
+    }
+}

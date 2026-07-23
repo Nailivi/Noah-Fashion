@@ -1,0 +1,562 @@
+/* Restablecimiento básico */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+ background-color: #f9f9f9;
+ color: #222222;
+}
+
+a {
+ text-decoration: none;
+ color: inherit;
+}
+ul {
+ list-style: none;
+}
+
+.main-header {
+ background-color: #ffffff;
+ display: table;
+ width: 100%;
+ padding: 20px 4%;
+ border-bottom: 1px solid #eeeeee;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+}
+
+.logo, .nav-bar, .user-actions {
+ display: table-cell;
+ vertical-align: middle;
+}
+.logo-img {
+    height: 100px; /* Ajusta este número si lo quieres más grande o pequeño */
+    width: auto;  /* Mantiene la proporción original para que no se deforme */
+    display: block;
+}
+.nav-bar {
+ text-align: center;
+}
+.nav-bar ul li {
+ display: inline-block;
+ margin: 0 15px;
+}
+.nav-bar ul li a {
+ font-weight: 600;
+ font-size: 15px;
+ transition: color 0.3s;
+}
+.nav-bar ul li a:hover {
+ color: #e74c3c;
+}
+.link-oferta {
+ color: #e74c3c !important;
+}
+.user-actions {
+ text-align: right;
+}
+.user-actions a {
+ margin-left: 15px;
+ font-size: 16px;
+}
+.hero-banner {
+ background-color: #1a1a1a;
+ /* En la web real puedes usar una imagen de fondo:
+ background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('rutaimagen.jpg'); */
+ background-size: cover;
+ background-position: center;
+ color: #ffffff;
+ text-align: center;
+ padding: 100px 20px;
+}
+.hero-content h2 {
+ font-size: 38px;
+ margin-bottom: 10px;
+ letter-spacing: 2px;
+}
+.hero-content p {
+ font-size: 18px;
+ margin-bottom: 25px;
+ color: #dddddd;
+}
+.btn-primary {
+ display: inline-block;
+ background-color: #ffffff;
+ color: #111111;
+ padding: 12px 30px;
+ font-weight: 700;
+ border-radius: 4px;
+ transition: all 0.3s;
+}
+.btn-primary:hover {
+ background-color: #e74c3c;
+ color: #ffffff;
+}
+.catalog-container {
+ max-width: 1200px;
+ margin: 40px auto;
+ padding: 0 20px;
+}
+.section-title {
+ text-align: center;
+ font-size: 28px;
+ margin-bottom: 30px;
+ border: none;
+ padding: 0;
+}
+
+/* Diseño de tarjetas estructuradas */
+.products-grid {
+ display: block;
+ width: 100%;
+}
+.product-card {
+ display: inline-block;
+ width: 23%;
+ margin-right: 2%;
+ margin-bottom: 30px;
+ background-color: #ffffff;
+ border: 1px solid #eeeeee;
+ border-radius: 6px;
+ overflow: hidden;
+ vertical-align: top;
+ transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:nth-child(4n) {
+ margin-right: 0;
+}
+.product-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.product-image img {
+ width: 100%;
+ height: 280px;
+ object-fit: cover;
+}
+.product-info {
+ padding: 15px;
+}
+.product-info h3 {
+ font-size: 16px;
+ margin-bottom: 5px;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+.category {
+ font-size: 13px;
+ color: #777777;
+ margin-bottom: 8px;
+}
+.price {
+ font-size: 18px;
+ font-weight: 700;
+ color: #111111;
+ margin-bottom: 12px;
+}
+.btn-add {
+ width: 100%;
+ background-color: #111111;
+ color: #ffffff;
+ border: none;
+ padding: 10px;
+ font-weight: 600;
+ border-radius: 4px;
+ cursor: pointer;
+ transition: background 0.3s;
+}
+.btn-add:hover {
+ background-color: #e74c3c;
+}
+
+.main-footer {
+ background-color: #111111;
+ color: #ffffff;
+ padding: 40px 20px 20px 20px;
+ margin-top: 50px;
+}
+.footer-sections {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: table;
+ width: 100%;
+ border-bottom: 1px solid #222222;
+ padding-bottom: 20px;
+}
+.footer-box {
+ display: table-cell;
+ width: 50%;
+}
+.footer-box h4 {
+ font-size: 16px;
+ margin-bottom: 15px;
+ color: #000504;
+}
+.footer-box ul li {
+ margin-bottom: 8px;
+}
+.footer-box ul li a {
+ color: #999999;
+ font-size: 14px;
+ transition: color 0.3s;
+}
+.footer-box ul li a:hover {
+ color: #ffffff;
+}
+.footer-bottom {
+ text-align: center;
+ padding-top: 20px;
+ font-size: 13px;
+ color: #666666;
+}
+/* ==========================================
+   ESTILOS PARA LA PÁGINA DE CONTACTO
+   ========================================== */
+
+/* Layout general de la sección de contacto */
+.contact-container {
+    border-bottom: none;
+    margin-top: 20px;
+}
+
+.contact-box {
+    color: #222222;
+}
+
+.contact-box-left {
+    padding-right: 40px;
+}
+
+/* Botón especial de WhatsApp */
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white !important;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1eb954;
+}
+
+/* Lista de Redes Sociales */
+.social-list {
+    margin-top: 15px;
+}
+
+.social-list li {
+    margin-bottom: 12px;
+}
+
+.social-link {
+    font-weight: 600;
+}
+
+/* Colores específicos por red social */
+.social-link.instagram {
+    color: #E1306C;
+}
+
+.social-link.facebook {
+    color: #1877F2;
+}
+
+.social-link.tiktok {
+    color: #000000;
+}
+
+/* Espaciado para los iconos dentro de enlaces y botones */
+.social-link i, 
+.btn-whatsapp i {
+    margin-right: 8px;
+    font-size: 1.1em; /* Ajusta ligeramente el tamaño del icono */
+}
+
+/* Formulario de Contacto */
+.contact-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.btn-submit {
+    width: auto;
+    padding: 12px 30px;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-subtitle {
+    font-size: 16px;
+    color: #666666;
+    margin-top: -15px;
+}
+
+/* Contenedor de Historia y Fundadora (2 columnas) */
+.about-story-container {
+    display: table;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.about-story-text {
+    display: table-cell;
+    width: 65%;
+    vertical-align: top;
+    padding-right: 40px;
+}
+
+.about-story-text h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.about-story-text p {
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 15px;
+}
+
+.about-founder-card {
+    display: table-cell;
+    width: 35%;
+    vertical-align: top;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.founder-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.founder-info h4 {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.founder-title {
+    font-size: 13px;
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 13px;
+    color: #666666;
+    border-left: 3px solid #e74c3c;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #eeeeee;
+    margin: 40px 0;
+}
+
+/* Tarjetas de Misión y Visión */
+.about-mv-container {
+    display: table;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.mv-card {
+    display: table-cell;
+    width: 48%;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 25px;
+    border-radius: 6px;
+    vertical-align: top;
+}
+
+.mv-card:first-child {
+    margin-right: 4%;
+}
+
+.mv-icon {
+    font-size: 28px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.mv-card h3 {
+    margin-bottom: 10px;
+}
+
+.mv-card p {
+    color: #555555;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Grilla de Valores */
+.values-grid {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.value-item {
+    display: inline-block;
+    width: 23%;
+    margin-right: 2%;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 20px 15px;
+    border-radius: 6px;
+    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.value-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.value-item i {
+    font-size: 26px;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.value-item h4 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.value-item p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.4;
+}
+
+.user-actions {
+    text-align: right;
+}
+
+.search-trigger, 
+.cart-btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 16px;
+    color: #111111;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.search-trigger:hover, 
+.cart-btn:hover {
+    color: #e74c3c;
+}
+
+/* Ocultar la ventana de búsqueda por defecto */
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    z-index: 1000;
+    display: none; /* Oculto inicialmente */
+    align-items: center;
+    justify-content: center;
+}
+
+/* TRUCO CSS: Muestra el modal únicamente cuando la URL tiene #buscador-modal */
+.search-modal:target {
+    display: flex;
+}
+
+/* Caja de búsqueda centrada */
+.search-modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.search-modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Botón 'X' para cerrar */
+.close-search {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    color: #888888;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.close-search:hover {
+    color: #e74c3c;
+}
+
+/* Formulario dentro del modal */
+.modal-search-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.modal-search-form .btn-primary {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}

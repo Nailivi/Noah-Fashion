@@ -1,0 +1,51 @@
+/* scss/utilities/_animations.scss */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.search-modal-content {
+  animation: fadeInDown 0.4s ease-out forwards;
+}
+
+.btn-primary {
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #111111;
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: #e74c3c;
+  transform: translateY(-2px);
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.products-grid .product-card {
+  flex: 1 1 calc(25% - 20px);
+}
+@media (max-width: 768px) {
+  .products-grid .product-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+@media (max-width: 576px) {
+  .products-grid .product-card {
+    flex: 1 1 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

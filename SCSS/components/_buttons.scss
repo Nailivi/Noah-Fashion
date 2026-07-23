@@ -1,0 +1,21 @@
+// Clase base usando @extend
+%btn-base {
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    @extend %btn-base;
+    background-color: $color-principal;
+    color: #ffffff;
+
+    // Nesting (anidamiento) y pseudo-clase
+    &:hover {
+        background-color: $color-acento;
+        transform: translateY(-2px); // Transformación solicitada
+    }
+}
