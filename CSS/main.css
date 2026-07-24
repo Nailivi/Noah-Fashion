@@ -734,3 +734,26 @@ blockquote {
     border-radius: 4px;
     margin-top: 10px;
 }
+
+/* Botón especial de WhatsApp para la finalización de compra */
+.btn-checkout-whatsapp {
+    background-color: #25D366;
+    color: #ffffff;
+    width: 100%;
+    margin: 0;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-checkout-whatsapp:hover {
+    background-color: #1eb954;
+}
+
+.btn-checkout-whatsapp i {
+    margin-right: 6px;
+    font-size: 1.1em;
+}

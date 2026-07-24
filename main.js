@@ -129,19 +129,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 8. Finalizar compra (Simulación)
-    if (btnFinalizar) {
-        btnFinalizar.addEventListener('click', () => {
-            if (carrito.length === 0) {
-                alert('El carrito está vacío.');
-            } else {
-                alert('¡Gracias por tu compra! Tu pedido ha sido procesado con éxito.');
-                carrito = [];
-                actualizarCarritoUI();
-                modalCarrito.style.display = 'none';
-            }
+// 8. Finalizar compra e integrar con WhatsApp
+if (btnFinalizar) {
+    btnFinalizar.addEventListener('click', () => {
+        if (carrito.length === 0) {
+            alert('Tu carrito está vacío. Agrega productos antes de finalizar la compra.');
+            return;
+        }
+
+        // Configura aquí el número de teléfono de la asesora (con código de país, ej: 57 para Colombia)
+        const numeroTelefono = "571234567890"; 
+
+        // Construcción del mensaje de texto
+        let mensaje = "¡Hola! Quisiera concretar la compra de los siguientes productos de la tienda Moda Urbana:\n\n";
+        let totalAcumulado = 0;
+
+        carrito.forEach((producto, index) => {
+            const precioNumerico = parseInt(producto.precio.replace(/[^0-9]/g, '')) || 0;
+            const subtotal = precioNumerico * producto.cantidad;
+            totalAcumulado += subtotal;
+
+            mensaje += `${index + 1}. *${producto.titulo}*\n`;
+            mensaje += `   - Cantidad: ${producto.cantidad}\n`;
+            mensaje += `   - Precio unitario: ${producto.precio}\n\n`;
         });
-    }
+
+        mensaje += `*Total estimado:* $${totalAcumulado.toLocaleString('es-CO')}\n\n`;
+        mensaje += "Quedo atento/a para coordinar el pago y la dirección de envío. ¡Muchas gracias!";
+
+        // Codificar el texto para la URL de WhatsApp (convierte espacios y saltos de línea a formato seguro)
+        const mensajeCodificado = encodeURIComponent(mensaje);
+        const urlWhatsApp = `https://wa.me/${numeroTelefono}?text=${mensajeCodificado}`;
+
+        // Abrir el chat de WhatsApp en una pestaña nueva
+        window.open(urlWhatsApp, '_blank');
+
+        // Limpiar el carrito local tras enviar el pedido
+        carrito = [];
+        actualizarCarritoUI();
+        modalCarrito.style.display = 'none';
+    });
+}
 
     // Carga inicial al abrir la página
     actualizarCarritoUI();
