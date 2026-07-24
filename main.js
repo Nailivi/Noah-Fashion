@@ -128,20 +128,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-// 8. Finalizar compra e integrar con WhatsApp
-if (btnFinalizar) {
-    btnFinalizar.addEventListener('click', () => {
-        if (carrito.length === 0) {
-            alert('Tu carrito está vacío. Agrega productos antes de finalizar la compra.');
-            return;
+    
+    // 8. Finalizar compra e integrar con WhatsApp
+    if (btnFinalizar) {
+        btnFinalizar.addEventListener('click', () => {
+            if (carrito.length === 0) {
+                alert('Tu carrito está vacío. Agrega productos antes de finalizar la compra.');
+                return;
         }
 
         // Configura aquí el número de teléfono de la asesora (con código de país, ej: 57 para Colombia)
-        const numeroTelefono = "571234567890"; 
+        const numeroTelefono = "573203135812"; 
 
         // Construcción del mensaje de texto
-        let mensaje = "¡Hola! Quisiera concretar la compra de los siguientes productos de la tienda Moda Urbana:\n\n";
+        let mensaje = "¡Hola! Quisiera concretar la compra de los siguientes productos de la tienda Noah Fashion:\n\n";
         let totalAcumulado = 0;
 
         carrito.forEach((producto, index) => {
