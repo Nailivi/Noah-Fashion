@@ -1,3 +1,4 @@
+@use '../base/variables';
 // Clase base usando @extend
 %btn-base {
     padding: 12px 25px;
@@ -10,12 +11,12 @@
 
 .btn-primary {
     @extend %btn-base;
-    background-color: $color-principal;
+    background-color: variables.$color-accent;
     color: #ffffff;
 
     // Nesting (anidamiento) y pseudo-clase
     &:hover {
-        background-color: $color-acento;
+        background-color: variables.$color-accent;
         transform: translateY(-2px); // Transformación solicitada
     }
 }

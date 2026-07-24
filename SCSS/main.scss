@@ -1,9 +1,22 @@
-@import 'base/variables';
-@import 'base/reset';
-@import 'utilities/mixins';
-@import 'utilities/animations';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'components/buttons';
-@import 'components/cards';
-@import 'components/modal';
+@use 'base/variables';
+@use 'base/reset';
+@use 'utilities/mixins';
+@use 'utilities/animations';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/modal';
+
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: variables.$font-main;
+}
+
+body {
+    background-color: variables.$color-bg;
+    color: variables.$color-text;
+}
