@@ -105,29 +105,9 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-sections">
-            <div class="footer-box">
-                <h4>Ayuda</h4>
-                <ul>
-                    <li><a href="#envios">Envíos y Devoluciones</a></li>
-                    <li><a href="#guia-tallas">Guía de Tallas</a></li>
-                    <li><a href="contáctanos.html">Contáctanos</a></li>
-                </ul>
-            </div>
-            <div class="footer-box">
-                <h4>Síguenos</h4>
-                <p>Instagram | Facebook | TikTok</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 NOAH FASHION S.A.S — TODOS LOS DERECHOS RESERVADOS.</p>
-            <P>Bogotá, Colombia</P>
-        </div>
-    </footer>
+    <script src="main.js"></script>
 
     <div id="buscador-modal" class="search-modal">
-
         <div class="search-modal-content">
             <a href="#" class="close-search">&times;</a>
             <h3>¿Qué estás buscando?</h3>
@@ -137,7 +117,6 @@
             </form>
         </div>
     </div>
-    <script src="main.js"></script>
 
     <!-- MODAL DEL CARRITO DE COMPRAS -->
     <div id="carrito-modal" class="search-modal">
@@ -145,7 +124,7 @@
             <a href="#" id="close-cart" class="close-search">&times;</a>
             <h3><i class="fa-solid fa-cart-shopping"></i> Tu Carrito</h3>
             <!-- Lista dinámica de productos -->
-             <div id="lista-carrito" class="cart-items-container">
+            <div id="lista-carrito" class="cart-items-container">
             <!-- Se llena automáticamente con JS -->
             </div>
             <div class="cart-total-box">
@@ -159,5 +138,102 @@
             </div>
         </div>
     </div>
+
+    <!-- MODAL 1: ENVÍOS Y DEVOLUCIONES -->
+    <div id="modal-envios" class="search-modal">
+        <div class="search-modal-content help-modal-content">
+            <a href="#" class="close-search close-help">&times;</a>
+            
+            <h3><i class="fa-solid fa-truck-fast"></i> Envíos y Devoluciones</h3>
+            <div class="help-body">
+                <h4>🚚 Políticas de Envío</h4>
+                <ul>
+                    <li><strong>Envíos Nacionales:</strong> Entrega en 2 a 5 días hábiles a todo el país.</li>
+                    <li><strong>Envío Gratis:</strong> En compras superiores a $150.000 COP.</li>
+                    <li><strong>Rastreo:</strong> Recibirás un código de seguimiento a tu correo una vez despachado.</li>
+                </ul>
+                <hr class="help-divider">
+                <h4>🔄 Devoluciones y Cambios</h4>
+                <ul>
+                    <li>Tienes hasta <strong>30 días calendario</strong> tras recibir tu compra para solicitar un cambio.</li>
+                    <li>Las prendas deben estar sin usar, con sus etiquetas originales e higiénicas.</li>
+                    <li>El primer cambio por talla es 100% gratuito.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MODAL 2: GUÍA DE TALLAS -->
+    <div id="modal-tallas" class="search-modal">
+        <div class="search-modal-content help-modal-content">
+            <a href="#" class="close-search close-help">&times;</a>
+            
+            <h3><i class="fa-solid fa-ruler-combined"></i> Guía de Tallas</h3>
+            
+            <div class="help-body">
+                <p>Usa esta tabla como referencia para encontrar tu talla ideal en Moda Urbana:</p>
+                
+                <table class="size-table">
+                    <thead>
+                        <tr>
+                            <th>Talla</th>
+                            <th>Pecho (cm)</th>
+                            <th>Cintura (cm)</th>
+                            <th>Cadera (cm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>S</strong></td>
+                            <td>88 - 94</td>
+                            <td>74 - 80</td>
+                            <td>90 - 96</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M</strong></td>
+                            <td>95 - 101</td>
+                            <td>81 - 87</td>
+                            <td>97 - 103</td>
+                        </tr>
+                        <tr>
+                            <td><strong>L</strong></td>
+                            <td>102 - 108</td>
+                            <td>88 - 94</td>
+                            <td>104 - 110</td>
+                        </tr>
+                        <tr>
+                            <td><strong>XL</strong></td>
+                            <td>109 - 115</td>
+                            <td>95 - 101</td>
+                            <td>111 - 117</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p class="size-tip">💡 <em>Tip: Si estás entre dos tallas, te recomendamos elegir la más grande para un ajuste oversize más cómodo.</em></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-box">
+                <h4>Ayuda</h4>
+                <ul class="footer-links">
+                    <li><a href="#modal-envios" class="open-help-modal">Envíos y devoluciones</a></li>
+                    <li><a href="#modal-tallas" class="open-help-modal">Guía de tallas</a></li>
+                    <li><a href="contáctanos.html">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Síguenos</h4>
+                <p>Instagram | Facebook | TikTok</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NOAH FASHION S.A.S — TODOS LOS DERECHOS RESERVADOS.</p>
+            <P>Bogotá, Colombia</P>
+        </div>
+    </footer>
 </body>
 </html>

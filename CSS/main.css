@@ -651,3 +651,86 @@ blockquote {
 .btn-secondary:hover {
     background-color: #dddddd;
 }
+
+/* ==========================================
+   ESTILOS DE MODALES DE AYUDA Y TABLA DE TALLAS
+   ========================================== */
+
+.help-modal-content {
+    max-width: 550px;
+    text-align: left;
+}
+
+.help-modal-content h3 {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+    color: #111111;
+}
+
+.help-body {
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.help-body h4 {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #e74c3c;
+}
+
+.help-body ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.help-body li {
+    font-size: 13px;
+    color: #444444;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.help-divider {
+    border: 0;
+    height: 1px;
+    background: #eeeeee;
+    margin: 15px 0;
+}
+
+/* Tabla de Tallas Semántica */
+.size-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+.size-table th, 
+.size-table td {
+    padding: 10px;
+    border: 1px solid #eeeeee;
+    text-align: center;
+}
+
+.size-table th {
+    background-color: #111111;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.size-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.size-tip {
+    font-size: 12px;
+    color: #666666;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}

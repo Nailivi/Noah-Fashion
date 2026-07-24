@@ -146,3 +146,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carga inicial al abrir la página
     actualizarCarritoUI();
 });
+
+// Abrir y cerrar Modales de Ayuda (Envíos y Tallas)
+document.querySelectorAll('.open-help-modal').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').replace('#', '');
+        const targetModal = document.getElementById(targetId);
+        if (targetModal) {
+            targetModal.style.display = 'flex';
+        }
+    });
+});
+
+// Cerrar modales de ayuda al presionar 'X'
+document.querySelectorAll('.close-help').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        btn.closest('.search-modal').style.display = 'none';
+    });
+});
