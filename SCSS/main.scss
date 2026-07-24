@@ -1,22 +1,110 @@
-@use 'base/variables';
-@use 'base/reset';
-@use 'utilities/mixins';
-@use 'utilities/animations';
-@use 'layout/header';
-@use 'layout/footer';
-@use 'components/buttons';
-@use 'components/cards';
-@use 'components/modal';
+// ==========================================
+// VARIABLES DE SASS (Requisito de Rúbrica)
+// ==========================================
+$color-primary: #111111;
+$color-accent: #e74c3c;
+$color-bg: #f9f9f9;
+$color-card-bg: #ffffff;
+$color-text: #222222;
+$color-border: #eeeeee;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-/* Reset general */
+// ==========================================
+// ESTILOS GENERALES
+// ==========================================
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: variables.$font-main;
+    font-family: $font-family;
 }
 
 body {
-    background-color: variables.$color-bg;
-    color: variables.$color-text;
+    background-color: $color-bg;
+    color: $color-text;
+}
+
+// ==========================================
+// GRILLA Y TARJETAS DE PRODUCTOS (SCSS Nesting)
+// ==========================================
+.products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    width: 100%;
+
+    // Media Queries anidadas en SASS
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.product-card {
+    background-color: $color-card-bg;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    // Anidamiento de la imagen
+    .product-image img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+    }
+
+    // Anidamiento de la información
+    .product-info {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: $color-primary;
+        }
+
+        .category {
+            font-size: 13px;
+            color: #777777;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 700;
+            color: $color-primary;
+            margin-bottom: 12px;
+        }
+    }
+
+    .btn-add {
+        width: 100%;
+        background-color: $color-primary;
+        color: #ffffff;
+        border: none;
+        padding: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+            background-color: $color-accent;
+        }
+    }
 }
